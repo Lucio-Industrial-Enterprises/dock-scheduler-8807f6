@@ -7,5 +7,5 @@ def shipping_quote(weight_kg: float, zone: str) -> float:
         raise ValueError("weight must be positive")
     if zone not in {"local", "regional"}:
         raise ValueError("unknown zone")
-    base = 4.0 if zone == "local" else 8.0
+    base = 5.0 if zone == "local" else 8.0
     return round(base + 1.5 * weight_kg, 2)
